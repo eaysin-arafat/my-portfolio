@@ -1,12 +1,11 @@
-import RootLayout from "../layout/RootLayout";
-
 import Experience from "../components/Experience";
+import PageLayout from "../layout/PageLayout";
 
 const ExperiencePage = () => {
   return (
-    <RootLayout className="h-screen">
+    <PageLayout className="h-screen">
       <Experience />
-    </RootLayout>
+    </PageLayout>
   );
 };
 

@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   const handleMobileNav = () => {
     setIsOpen(!isOpen);
@@ -18,34 +19,88 @@ const Navbar = () => {
             <div className="flex items-center mx-10 justify-between w-full">
               <div className="flex justify-center items-center flex-shrink-0 ">
                 <h1 className=" font-bold text-xl cursor-pointer">
-                  <Link to="/">
-                    <span className="text-whiteColor">Eaysin</span>
-                    <span className="text-primaryColor">Arafat</span>
+                  <Link to="/" className="text-whiteColor">
+                    <span>Eaysin</span>
+                    <span
+                      className={
+                        location.pathname === "/" ? "text-primaryColor" : ""
+                      }
+                    >
+                      Arafat
+                    </span>
                   </Link>
                 </h1>
               </div>
               <div className="hidden md:block">
                 <div className="flex items-baseline space-x-10 font-semibold mt-1">
-                  <Link className="text-whiteColor" to="/">
+                  <Link
+                    className={
+                      location.pathname === "/"
+                        ? "text-primaryColor"
+                        : "text-whiteColor"
+                    }
+                    to="/"
+                  >
                     Home
                   </Link>
-                  <Link className="text-whiteColor" to="/about">
+                  <Link
+                    className={
+                      location.pathname === "/about"
+                        ? "text-primaryColor"
+                        : "text-whiteColor"
+                    }
+                    to="/about"
+                  >
                     About
                   </Link>
-                  {/* <Link to="/experience">Experience</Link> */}
-                  <Link className="text-whiteColor" to="/projects">
+                  <Link
+                    className={
+                      location.pathname === "/projects"
+                        ? "text-primaryColor"
+                        : "text-whiteColor"
+                    }
+                    to="/projects"
+                  >
                     Projects
                   </Link>
-                  <Link className="text-whiteColor" to="/experience">
+                  <Link
+                    className={
+                      location.pathname === "/experience"
+                        ? "text-primaryColor"
+                        : "text-whiteColor"
+                    }
+                    to="/experience"
+                  >
                     Experience
                   </Link>
-                  <Link to="/open-source" className="text-whiteColor">
+                  <Link
+                    className={
+                      location.pathname === "/open-source"
+                        ? "text-primaryColor"
+                        : "text-whiteColor"
+                    }
+                    to="/open-source"
+                  >
                     Open Source
                   </Link>
-                  <Link className="text-whiteColor" to="/blog">
+                  <Link
+                    className={
+                      location.pathname === "/blog"
+                        ? "text-primaryColor"
+                        : "text-whiteColor"
+                    }
+                    to="/blog"
+                  >
                     Blog
                   </Link>
-                  <Link className="text-whiteColor" to="/contact-me">
+                  <Link
+                    className={
+                      location.pathname === "/contact"
+                        ? "text-primaryColor"
+                        : "text-whiteColor"
+                    }
+                    to="/contact"
+                  >
                     Contact Me
                   </Link>
                 </div>
@@ -106,49 +161,78 @@ const Navbar = () => {
               <div>
                 <div className="flex flex-col space-y-4 pt-4 font-semibold">
                   <Link
-                    className="text-blue-500"
+                    className={
+                      location.pathname === "/"
+                        ? "text-primaryColor"
+                        : "text-blue-500"
+                    }
                     to="/"
                     onClick={handleMobileNav}
                   >
                     Home
                   </Link>
                   <Link
-                    className="text-blue-500"
+                    className={
+                      location.pathname === "/about"
+                        ? "text-primaryColor"
+                        : "text-blue-500"
+                    }
                     to="/about"
                     onClick={handleMobileNav}
                   >
                     About
                   </Link>
-                  {/* <Link to="/experience" onClick={handleMobileNav}>
-                    Experience
-                  </Link> */}
                   <Link
-                    className="text-blue-500"
+                    className={
+                      location.pathname === "/projects"
+                        ? "text-primaryColor"
+                        : "text-blue-500"
+                    }
                     to="/projects"
                     onClick={handleMobileNav}
                   >
                     Projects
                   </Link>
                   <Link
-                    className="text-blue-500"
+                    className={
+                      location.pathname === "/experience"
+                        ? "text-primaryColor"
+                        : "text-blue-500"
+                    }
                     to="/experience"
                     onClick={handleMobileNav}
                   >
                     Experience
                   </Link>
-                  <Link to="/open-source" onClick={handleMobileNav}>
+                  <Link
+                    className={
+                      location.pathname === "/open-source"
+                        ? "text-primaryColor"
+                        : "text-blue-500"
+                    }
+                    to="/open-source"
+                    onClick={handleMobileNav}
+                  >
                     Open Source
                   </Link>
                   <Link
-                    className="text-blue-500"
+                    className={
+                      location.pathname === "/blog"
+                        ? "text-primaryColor"
+                        : "text-blue-500"
+                    }
                     to="/blog"
                     onClick={handleMobileNav}
                   >
                     Blog
                   </Link>
                   <Link
-                    className="text-blue-500"
-                    to="/contact-me"
+                    className={
+                      location.pathname === "/contact"
+                        ? "text-primaryColor"
+                        : "text-blue-500"
+                    }
+                    to="/contact"
                     onClick={handleMobileNav}
                   >
                     Contact Me

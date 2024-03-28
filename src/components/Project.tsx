@@ -3,12 +3,12 @@ import { HiOutlineExternalLink } from "react-icons/hi";
 import { Link } from "react-router-dom";
 import RootLayout from "../layout/RootLayout";
 
-const Project = () => {
+const Project = ({ seeMore }: { seeMore?: boolean }) => {
   return (
     <RootLayout>
       <h1 className="pageTitle">Projects</h1>
       <div className="grid gap-4">
-        {[5, 7, 9, 7, 5, 9].map((item) => (
+        {[5, 5, 9].map((item) => (
           <section
             key={item}
             className="p-4 md:p-8 bg-bgGrayColor rounded-lg shadow-lg"
@@ -16,8 +16,8 @@ const Project = () => {
             <h1 className="font-bold text-lg md:text-xl text-primaryColor pb-4">
               Word Scrambler Fire Fox Extension
             </h1>
-            <div className="grid grid-cols-1 gap-0 sm:gap-8 md:grid-cols-3 items-center">
-              <div className="aspect-w-4 aspect-h-3">
+            <div className="grid grid-cols-1 gap-0 sm:gap-8 md:grid-cols-3 items-center justify-center">
+              <div className="aspect-w-4 aspect-h-3 h-full w-full">
                 <img src="/images/project-images/ordsc.png" alt="" />
               </div>
               <blockquote className="sm:col-span-2">
@@ -60,6 +60,14 @@ const Project = () => {
             </div>
           </section>
         ))}
+        {/* See More Button */}
+        {seeMore && (
+          <div className="text-center mt-8">
+            <Link to="/projects" className="btn btn-primary">
+              See More
+            </Link>
+          </div>
+        )}
       </div>
     </RootLayout>
   );

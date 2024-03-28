@@ -19,7 +19,7 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/projects" element={<ProjectPage />} />
         <Route path="/blog" element={<BlogPage posts={posts} />} />
-        <Route path="/contact-me" element={<ContactPage />} />
+        <Route path="/contact" element={<ContactPage />} />
         <Route path="/experience" element={<ExperiencePage />} />
         <Route path="/open-source" element={<OpenSourcePage />} />
         <Route path="*" element={<Error404 />} />{" "}
@@ -39,6 +39,24 @@ const posts = [
       excerpt: "This is an example excerpt for post 1.",
     },
     slug: "example-post-1",
+  },
+  {
+    frontmatter: {
+      title: "Example Post 2",
+      cover_image: "https://example.com/image2.jpg",
+      date: "2024-03-28",
+      excerpt: "This is an example excerpt for post 2.",
+    },
+    slug: "example-post-2",
+  },
+  {
+    frontmatter: {
+      title: "Example Post 2",
+      cover_image: "https://example.com/image2.jpg",
+      date: "2024-03-28",
+      excerpt: "This is an example excerpt for post 2.",
+    },
+    slug: "example-post-2",
   },
   {
     frontmatter: {
