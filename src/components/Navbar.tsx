@@ -12,7 +12,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav className="fixed z-20 w-full">
+      <nav className="fixed z-20 w-full bg-bgColor">
         <div className="w-full">
           <div className="flex items-center h-20 w-full ">
             <div className="flex items-center mx-10 justify-between w-full">
@@ -20,7 +20,7 @@ const Navbar = () => {
                 <h1 className=" font-bold text-xl cursor-pointer">
                   <Link to="/">
                     <span className="text-whiteColor">Eaysin</span>
-                    <span className="text-buttonColor">Arafat</span>
+                    <span className="text-primaryColor">Arafat</span>
                   </Link>
                 </h1>
               </div>
@@ -36,7 +36,7 @@ const Navbar = () => {
                   <Link className="text-whiteColor" to="/projects">
                     Projects
                   </Link>
-                  <Link className="text-whiteColor" to="/projects">
+                  <Link className="text-whiteColor" to="/experience">
                     Experience
                   </Link>
                   <Link to="/open-source" className="text-whiteColor">
@@ -52,24 +52,26 @@ const Navbar = () => {
               </div>
               <div className="flex justify-center items-center flex-shrink-0 md:block">
                 <div className="flex space-x-4">
-                  <div>
-                    <Link
-                      to="https://github.com/prasad-chavan1"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <BsGithub className="hidden md:block" size="2rem" />
-                    </Link>
-                  </div>
-                  <div>
-                    <Link
-                      to="https://www.linkedin.com/in/prasad-chavan2003/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <BsLinkedin className="hidden md:block" size="2rem" />
-                    </Link>
-                  </div>
+                  <Link
+                    to="https://github.com/prasad-chavan1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <BsGithub
+                      className="hidden md:block text-whiteColor"
+                      size="2rem"
+                    />
+                  </Link>
+                  <Link
+                    to="https://www.linkedin.com/in/prasad-chavan2003/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <BsLinkedin
+                      className="hidden md:block text-whiteColor"
+                      size="2rem"
+                    />
+                  </Link>
                 </div>
               </div>
             </div>
@@ -129,7 +131,7 @@ const Navbar = () => {
                   </Link>
                   <Link
                     className="text-blue-500"
-                    to="/projects"
+                    to="/experience"
                     onClick={handleMobileNav}
                   >
                     Experience

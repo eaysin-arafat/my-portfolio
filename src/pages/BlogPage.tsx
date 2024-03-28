@@ -1,22 +1,16 @@
-import Intruduction from "../components/Intruduction";
-import About from "../components/About";
-import Projects from "../components/Project";
 import Blog from "../components/Blog";
-import Contact from "../components/Contact";
+import PageLayout from "../layout/PageLayout";
+// import {HiOutlineExternalLink} from 'react-icons/hi'
 
-const HomePage = () => {
+const BlogPage = () => {
   return (
-    <div className="w-full">
-      <Intruduction />
-      <About />
-      <Projects />
+    <PageLayout className="h-screen">
       <Blog posts={posts} />
-      <Contact />
-    </div>
+    </PageLayout>
   );
 };
 
-export default HomePage;
+export default BlogPage;
 
 const posts = [
   {

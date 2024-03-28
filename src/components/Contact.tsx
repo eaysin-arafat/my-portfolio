@@ -6,6 +6,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import Popup from "./ContactSubmitPopup";
 import { useForm } from "react-hook-form";
 import RootLayout from "../layout/RootLayout";
+import { Link } from "react-router-dom";
 
 const contactSchema = yup.object().shape({
   name: yup.string().required("Name is required"),
@@ -52,49 +53,43 @@ const Contact = () => {
   return (
     <>
       <RootLayout>
-        <div className="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
+        <h1 className="pageTitle">Contact Me</h1>
+        <div className="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5 pb-10">
           <div className="lg:col-span-2">
-            <h1 className="font-bold text-6xl text-blue-500 pt-20">
-              Let's Talk
-            </h1>
-            <p className="max-w-xl text-lg pt-4">
+            <h1 className="font-bold text-6xl text-primaryColor">Let's Talk</h1>
+            <p className="max-w-xl text-lg pt-4 text-grayColor">
               Have any questions? Send me a message here! <br />I respond
               quickly (within 48 hours). <br />
               <br />
               Additional ways to get in touch <br />
               LinkedIn:{" "}
-              <a
-                className="text-blue-500 hover:underline"
-                href="https://www.linkedin.com/in/prasad-chavan2003/"
+              <Link
+                className="text-primaryColor hover:underline"
+                to="https://www.linkedin.com/in/prasad-chavan2003/"
                 target="_blank"
-                rel="noopener noreferrer"
               >
                 /in/prasad-chavan2003/
-              </a>{" "}
+              </Link>{" "}
               <br />
               Email:{" "}
-              <a
-                className="text-blue-500 hover:underline"
-                href="mailto:askokc4321@gmail.com"
+              <Link
+                className="text-primaryColor hover:underline"
+                to="mailto:askokc4321@gmail.com"
               >
                 askokc4321@gmail.com
-              </a>
+              </Link>
             </p>
           </div>
 
-          <div className="p-8 rounded-lg lg:p-12 lg:col-span-3">
-            <form
-              ref={form}
-              onSubmit={handleSubmit(submitForm)}
-              className="space-y-4"
-            >
+          <div className="rounded-lg lg:col-span-3">
+            <form onSubmit={handleSubmit(submitForm)} className="space-y-4">
               <div>
-                <label htmlFor="name" className="sr-only">
+                <label htmlFor="name" className="sr-only text-whiteColor">
                   Name
                 </label>
                 <input
                   id="name"
-                  className="w-full p-3 text-sm rounded-lg border border-black"
+                  className="w-full p-3 text-sm rounded-sm border border-grayColor bg-bgGrayColor placeholder:text-grayColor"
                   placeholder="Name"
                   type="text"
                   {...register("name")}
@@ -107,7 +102,7 @@ const Contact = () => {
                 </label>
                 <input
                   id="email"
-                  className="w-full p-3 text-sm rounded-lg border border-black"
+                  className="w-full p-3 text-sm rounded-sm border border-grayColor bg-bgGrayColor placeholder:text-grayColor"
                   placeholder="Email address"
                   type="email"
                   {...register("email")}
@@ -120,9 +115,8 @@ const Contact = () => {
                 </label>
                 <textarea
                   id="message"
-                  className="w-full p-3 text-sm rounded-lg border border-black"
+                  className="w-full p-3 text-sm rounded-sm border border-grayColor bg-bgGrayColor placeholder:text-grayColor"
                   placeholder="Message"
-                  rows="8"
                   {...register("message")}
                 ></textarea>
                 <p className="text-red-600">{errors.message?.message}</p>
@@ -131,7 +125,7 @@ const Contact = () => {
               <div className="mt-4">
                 <button
                   type="submit"
-                  className="inline-flex items-center justify-center w-full px-5 py-3 text-white bg-mnBlue rounded-lg sm:w-auto space-x-2 hover:bg-carolinaBlue"
+                  className="btn inline-flex items-center justify-center w-full px-5 py-3 rounded-lg sm:w-auto space-x-2"
                 >
                   <span className="font-medium"> Send </span>
                   <IoIosSend size="20px" />

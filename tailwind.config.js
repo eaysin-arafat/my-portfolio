@@ -4,16 +4,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        bgColor: "#222629",
+        bgColor: "#121314",
+        bgGrayColor: "#1D1E1F",
         whiteColor: "#FFFFFF",
-        buttonColor: "#8AC832",
+        primaryColor: "#37B55C",
         grayColor: "#717579",
         blackColor: "#2D2F31",
-        // blueGrey: "#5885AF",
-        // midnightBlue: "#41729F",
-        // darkBlue: "#274472",
-        // babyBlue: "#C3E0E5",
-        // gainsboro: "#E2DED0",
       },
     },
   },

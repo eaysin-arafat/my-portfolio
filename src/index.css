@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.btn {
+  @apply px-12 py-3 text-sm font-medium text-white bg-[#37B55C] rounded shadow-md hover:bg-[#6BA324] transition-all focus:outline-none focus:ring;
+}
+
+.pageTitle {
+  @apply pb-6 mt-6 uppercase text-4xl font-bold text-center text-whiteColor mb-8;
+}

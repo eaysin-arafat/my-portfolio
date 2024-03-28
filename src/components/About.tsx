@@ -5,26 +5,24 @@ import { Link } from "react-router-dom";
 const About = () => {
   return (
     <RootLayout>
-      <h1 className="uppercase text-4xl font-bold text-center text-blue-900 mb-8">
-        About Me
-      </h1>
+      <h1 className="pageTitle">About Me</h1>
 
       <div>
         <div className="flex flex-col">
           <div className="">
-            <h1 className="text-3xl font-bold sm:text-4xl mb-8">
-              Hello, I&#39;m <span className="text-blue-500">Prasad</span>
+            <h1 className="text-3xl font-bold sm:text-4xl mb-8 text-whiteColor">
+              Hello, I&#39;m <span className="text-primaryColor">Prasad</span>
             </h1>
 
-            <h2 className="font-bold text-3xl text-left mb-5">
+            <h2 className="font-bold text-3xl text-left mb-5 text-whiteColor">
               I&#39;m a
-              <span className="text-blue-500"> FullStack Developer</span> with a
-              passion for
-              <span className="text-blue-500"> Cloud Computing</span>.
+              <span className="text-primaryColor"> FullStack Developer</span>{" "}
+              with a passion for
+              <span className="text-primaryColor"> Cloud Computing</span>.
             </h2>
           </div>
 
-          <p className="text-left font-normal flex-wrap">
+          <p className="text-left font-normal flex-wrap text-grayColor">
             I pursuing graduation from SSBT, COET, JALGAON (425001). Most of my
             experience is in full stack web development and problem solving.
             Check out some of my work &nbsp;
@@ -36,7 +34,7 @@ const About = () => {
             </Link>
           </p>
           <p className="text-left font-normal mb-5 flex-wrap"></p>
-          <p className="text-left font-normal mb-3 flex-wrap">
+          <p className="text-left font-normal mb-3 flex-wrap text-grayColor">
             In my free time, I love to learn new technologies and keep
             up-to-date with full stack developement. Outside of programming, I
             love to read novels and watch animes. I learnt alot things from
