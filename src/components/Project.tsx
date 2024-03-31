@@ -37,14 +37,14 @@ const Project = ({ seeMore }: { seeMore: boolean }) => {
                     Visit Extension
                   </Link>
                 </p>
-                <cite className="flex justify-between items-center mt-3 md:mt-0">
+                <cite className="flex flex-row lg:flex-col justify-between lg:justify-start mt-3 md:mt-0">
                   <div className="inline-flex items-center not-italic">
                     <span className="hidden w-6 h-px bg-gray-400 sm:inline-block"></span>
                     <p className="text-xs md:text-base text-gray-500 sm:ml-3">
                       {project?.technologies.join(", ")}
                     </p>
                   </div>
-                  <div className="flex  gap-3">
+                  <div className="flex justify-end items-end gap-3">
                     <Link
                       to={project?.githubLink}
                       target="_blank"

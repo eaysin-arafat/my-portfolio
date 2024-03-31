@@ -3,7 +3,7 @@ import About from "../components/About";
 
 const AboutPage = () => {
   return (
-    <PageLayout>
+    <PageLayout className="h-screen">
       <About />
     </PageLayout>
   );

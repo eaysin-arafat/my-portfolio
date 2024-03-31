@@ -12,7 +12,7 @@ const Experience = () => {
             key={index}
             className="bg-bgGrayColor shadow-md rounded-md flex flex-col md:flex-row justify-center gap-5 p-5"
           >
-            <div>
+            <div className="flex flex-col gap-2">
               <p className="text-grayColor font-medium">{experience.date}</p>
               <div className="block justify-between">
                 <h2 className="text-xl md:text-2xl font-bold text-primaryColor mb-1 flex items-center gap-1">

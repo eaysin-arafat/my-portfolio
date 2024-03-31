@@ -5,6 +5,7 @@ import * as yup from "yup";
 import emailjs from "@emailjs/browser";
 import RootLayout from "../layout/RootLayout";
 import toast from "react-hot-toast";
+import { accountUrl } from "../data/account_url";
 
 const contactSchema = yup.object().shape({
   name: yup.string().required("Name is required"),
@@ -30,11 +31,14 @@ const Contact = () => {
       if (contactSchema.isValidSync(Object.fromEntries(formData))) {
         emailjs
           .sendForm(
-            import.meta.env.SERVICE_ID,
-            import.meta.env.TEMPLATE_ID,
+            // import.meta.env.SERVICE_ID,
+            // import.meta.env.TEMPLATE_ID,
+            "service_womj1hn",
+            "template_6kca3d9",
             formRef.current,
             {
-              publicKey: import.meta.env.PUBLIC_KEY,
+              publicKey: "pqxjk8SFtfGw-by0G",
+              // publicKey: import.meta.env.PUBLIC_KEY,
             }
           )
           .then(
@@ -52,7 +56,6 @@ const Contact = () => {
             }
           );
       } else {
-        // Handle form validation errors
         console.log("Form validation failed");
       }
     }
@@ -66,13 +69,13 @@ const Contact = () => {
           <h1 className="font-bold text-6xl text-primaryColor">Let's Talk</h1>
           <p className="max-w-xl text-lg pt-4 text-grayColor">
             Have any questions? Send me a message here! <br />I respond quickly
-            (within 48 hours). <br />
+            (within 24 hours). <br />
             <br />
             Additional ways to get in touch <br />
             LinkedIn:{" "}
             <Link
               className="text-primaryColor hover:underline"
-              to="https://www.linkedin.com/in/prasad-chavan2003/"
+              to={accountUrl?.linkedin}
               target="_blank"
             >
               /in/prasad-chavan2003/
@@ -81,9 +84,9 @@ const Contact = () => {
             Email:{" "}
             <Link
               className="text-primaryColor hover:underline"
-              to="mailto:askokc4321@gmail.com"
+              to={`mailto:${accountUrl?.emailAddress}`}
             >
-              askokc4321@gmail.com
+              {accountUrl?.emailAddress}
             </Link>
           </p>
         </div>

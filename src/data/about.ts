@@ -11,9 +11,9 @@ type AboutData = {
 
 export const aboutData: AboutData = {
   pageTitle: "About Me",
-  greetings: "Hello, I'm",
-  name: "Prasad",
-  role: "FullStack Developer",
+  greetings: "Hello",
+  name: "Eaysin Arafat",
+  role: "Frontend Developer",
   passion: "Cloud Computing",
   description: `I pursuing graduation from SSBT, COET, JALGAON (425001). Most of my
       experience is in full stack web development and problem solving.
