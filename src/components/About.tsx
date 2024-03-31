@@ -21,7 +21,7 @@ const About = () => {
 
       <div>
         <div className="flex flex-col">
-          <div className="">
+          <div className="mb-5">
             <h1 className="text-3xl font-bold sm:text-4xl mb-8 text-whiteColor">
               {greetings}, I&#39;m{" "}
               <span className="text-primaryColor">{name}</span>

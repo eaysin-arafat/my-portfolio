@@ -1,10 +1,10 @@
 import { IoIosSend } from "react-icons/io";
 import { Link } from "react-router-dom";
-import { useState, useRef } from "react";
+import { useRef } from "react";
 import * as yup from "yup";
 import emailjs from "@emailjs/browser";
-import Popup from "./ContactSubmitPopup";
 import RootLayout from "../layout/RootLayout";
+import toast from "react-hot-toast";
 
 const contactSchema = yup.object().shape({
   name: yup.string().required("Name is required"),
@@ -13,9 +13,13 @@ const contactSchema = yup.object().shape({
 });
 
 const Contact = () => {
-  const [submitted, setSubmitted] = useState(false);
-  const [errorSubmitting, setErrorSubmitting] = useState(false);
   const formRef = useRef<HTMLFormElement | null>(null);
+
+  const SERVICE_ID_ = import.meta.env.SERVICE_ID;
+  const PUBLIC_KEY = import.meta.env.PUBLIC_KEY;
+
+  console.log("ss", SERVICE_ID_);
+  console.log(PUBLIC_KEY);
 
   const onSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
@@ -25,18 +29,26 @@ const Contact = () => {
 
       if (contactSchema.isValidSync(Object.fromEntries(formData))) {
         emailjs
-          .sendForm("service_womj1hn", "template_6kca3d9", formRef.current, {
-            publicKey: "pqxjk8SFtfGw-by0G",
-          })
+          .sendForm(
+            import.meta.env.SERVICE_ID,
+            import.meta.env.TEMPLATE_ID,
+            formRef.current,
+            {
+              publicKey: import.meta.env.PUBLIC_KEY,
+            }
+          )
           .then(
             (response) => {
-              setSubmitted(true);
               formRef?.current?.reset();
-              console.log("SUCCESS!", response.status, response.text);
+              if (response?.status === 200 && response.text === "OK") {
+                toast.success("Message sent!");
+              } else {
+                toast?.error("Something went wrong!");
+              }
             },
             (error) => {
               console.log("FAILED TO SEND MESSAGE...", error);
-              setErrorSubmitting(true);
+              toast.error("Failed to send message!!");
             }
           );
       } else {
@@ -123,18 +135,6 @@ const Contact = () => {
                 <IoIosSend size="20px" />
               </button>
             </div>
-            {submitted && (
-              <Popup
-                title="Message Sent! 👍"
-                message="Thank you for your message. I will get back to you within 48 hours."
-              />
-            )}
-            {errorSubmitting && (
-              <Popup
-                title="Error Sending Message!"
-                message="If this error keeps occurring please contact me directly through email and/or LinkedIn"
-              />
-            )}
           </form>
         </div>
       </div>
