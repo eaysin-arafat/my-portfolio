@@ -1,14 +1,9 @@
 import { Link } from "react-router-dom";
 import Post from "./Post";
 import RootLayout from "../layout/RootLayout";
+import { BlogProps, posts } from "../data/blog";
 
-export default function Blog({
-  posts,
-  seeMore,
-}: {
-  posts: any;
-  seeMore?: boolean;
-}) {
+export default function Blog({ seeMore }: BlogProps) {
   return (
     <RootLayout className="md:w-screen">
       <h1 className="pageTitle">Blog</h1>

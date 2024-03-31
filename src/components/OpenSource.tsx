@@ -1,4 +1,4 @@
-import { FaReact } from "react-icons/fa";
+import { openSourceData } from "../data/openSource";
 import RootLayout from "../layout/RootLayout";
 
 const OpenSource = () => {
@@ -10,13 +10,14 @@ const OpenSource = () => {
       </h2>
 
       <ul className="flex flex-row gap-8 mb-2 bg-bgGrayColor p-8 rounded-md min-w-full">
-        <li className=" text-xl font-bold flex justify-center items-center flex-col text-whiteColor">
-          <FaReact size="40px" />
-          React
-        </li>
-        <li className=" text-xl font-bold flex justify-center items-center flex-col text-whiteColor">
-          Bluma CSS
-        </li>
+        {openSourceData.map((organization, index) => (
+          <li
+            key={index}
+            className="text-xl font-bold flex justify-center items-center flex-col text-whiteColor"
+          >
+            {organization}
+          </li>
+        ))}
       </ul>
     </RootLayout>
   );

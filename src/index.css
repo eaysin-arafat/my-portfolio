@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+/* In your CSS file */
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-text-fill-color: white; /* Set text color */
+  background-color: transparent !important; /* Set background color */
+  transition: background-color 5000s ease-in-out 0s; /* Override the default autofill background color transition */
+}
+
 .btn {
   @apply px-12 py-3 text-sm font-medium text-white bg-[#37B55C] rounded shadow-md hover:bg-[#6BA324] transition-all focus:outline-none focus:ring;
 }
