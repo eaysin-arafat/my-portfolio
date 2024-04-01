@@ -6,7 +6,7 @@ export interface BlogPost {
     date: string;
     excerpt: string;
   };
-  slug: string;
+  slug?: string;
 }
 
 export interface BlogProps {

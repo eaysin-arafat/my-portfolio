@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { projectData } from "../data/project";
 import RootLayout from "../layout/RootLayout";
 
-const Project = ({ seeMore }: { seeMore: boolean }) => {
+const Project = ({ seeMore }: { seeMore?: boolean }) => {
   return (
     <RootLayout>
       <h1 className="pageTitle">Projects</h1>
@@ -20,7 +20,7 @@ const Project = ({ seeMore }: { seeMore: boolean }) => {
             <div className="grid gap-3 sm:gap-8 md:grid-cols-3 ">
               <div className="col-span-2 md:col-span-1 flex items-center justify-center">
                 <img
-                  src={project?.image}
+                  src={project?.image[0]}
                   alt=""
                   className="min-h-full min-w-full"
                 />
@@ -30,11 +30,9 @@ const Project = ({ seeMore }: { seeMore: boolean }) => {
                   {project?.description} &nbsp;
                   <Link
                     className="text-primaryColor"
-                    to={project?.externalLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    to={`/project/${project.id}`}
                   >
-                    Visit Extension
+                    See more
                   </Link>
                 </p>
                 <cite className="flex flex-row lg:flex-col justify-between lg:justify-start mt-3 md:mt-0">
