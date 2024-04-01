@@ -8,9 +8,7 @@ import Experience from "../components/Experience";
 import { posts } from "../data/blog";
 
 const HomePage = () => {
-  const transformedPosts = posts.map((post) => ({
-    post: post,
-  }));
+  const transformedPosts = posts.map((post) => post);
 
   return (
     <div className="">
