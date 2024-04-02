@@ -20,6 +20,7 @@ const skillsData: SkillsData = [
 const Skills = () => {
   return (
     <div className="w-full">
+      <h1 className="text-primaryColor font-bold text-center mb-7">Skills</h1>
       <div className="mx-auto flex flex-col justify-center">
         {skillsData.map((category, index) => (
           <ul
