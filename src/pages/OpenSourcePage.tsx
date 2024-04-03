@@ -7,7 +7,7 @@ const OpenSourcePage = () => {
 
   return (
     <PageLayout className="h-screen">
-      <OpenSource />
+      <OpenSource isTitle={false} />
     </PageLayout>
   );
 };

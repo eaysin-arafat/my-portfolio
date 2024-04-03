@@ -3,7 +3,7 @@ import RootLayout from "../layout/RootLayout";
 import Skills from "./Skills";
 import { Link } from "react-router-dom";
 
-const About = () => {
+const About = ({ isTitle }: { isTitle?: boolean }) => {
   const {
     pageTitle,
     greetings,
@@ -17,7 +17,7 @@ const About = () => {
 
   return (
     <RootLayout>
-      <h1 className="pageTitle">{pageTitle}</h1>
+      {isTitle && <h1 className="pageTitle">{pageTitle}</h1>}
 
       <div>
         <div className="flex flex-col">

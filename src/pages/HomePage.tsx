@@ -16,12 +16,12 @@ const HomePage = () => {
   return (
     <div className="">
       <Intruduction />
-      <About />
-      <Projects seeMore />
-      <Experience />
-      <OpenSource />
-      <Blog posts={transformedPosts} seeMore />
-      <Contact />
+      <About isTitle={true} />
+      <Projects seeMore isTitle={true} />
+      <Experience isTitle={true} />
+      <OpenSource isTitle={true} />
+      <Blog posts={transformedPosts} seeMore isTitle={true} />
+      <Contact isTitle={true} />
     </div>
   );
 };

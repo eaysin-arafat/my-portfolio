@@ -6,8 +6,8 @@ const AboutPage = () => {
   useScrollToTop();
 
   return (
-    <PageLayout className="min-h-screen">
-      <About />
+    <PageLayout className="min-h-screen mt-10">
+      <About isTitle={false} />
     </PageLayout>
   );
 };

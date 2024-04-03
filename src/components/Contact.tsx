@@ -13,7 +13,7 @@ const contactSchema = yup.object().shape({
   message: yup.string().required("Message is required"),
 });
 
-const Contact = () => {
+const Contact = ({ isTitle }: { isTitle?: boolean }) => {
   const formRef = useRef<HTMLFormElement | null>(null);
 
   const SERVICE_ID_ = import.meta.env.SERVICE_ID;
@@ -63,7 +63,7 @@ const Contact = () => {
 
   return (
     <RootLayout>
-      <h1 className="pageTitle">Contact Me</h1>
+      {isTitle && <h1 className="pageTitle">Contact Me</h1>}
       <div className="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5 pb-10">
         <div className="lg:col-span-2">
           <h1 className="font-bold text-6xl text-primaryColor">Let's Talk</h1>
@@ -78,7 +78,7 @@ const Contact = () => {
               to={accountUrl?.linkedin}
               target="_blank"
             >
-              /in/prasad-chavan2003/
+              /in/eaysin-arafat/
             </Link>{" "}
             <br />
             Email:{" "}

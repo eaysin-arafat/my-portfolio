@@ -14,7 +14,7 @@ export default function ProjectPage() {
   }
 
   return (
-    <PageLayout className="min-h-screen">
+    <PageLayout className="min-h-screen ">
       <div className="pt-20">
         <Link
           to="/projects"
@@ -31,9 +31,11 @@ export default function ProjectPage() {
             <h1 className="text-2xl font-bold pt-4 text-primaryColor">
               {project.title}
             </h1>
-            <p className="prose pt-4 text-grayColor text-justify">
-              {project.description}
-            </p>
+            <ul className="prose pt-4 text-grayColor text-justify list-disc pl-5">
+              {project.description.map((point, index) => (
+                <li key={index}>{point}</li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>

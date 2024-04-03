@@ -4,10 +4,16 @@ import { Link } from "react-router-dom";
 import { projectData } from "../data/project";
 import RootLayout from "../layout/RootLayout";
 
-const Project = ({ seeMore }: { seeMore?: boolean }) => {
+const Project = ({
+  seeMore,
+  isTitle,
+}: {
+  seeMore?: boolean;
+  isTitle?: boolean;
+}) => {
   return (
     <RootLayout>
-      <h1 className="pageTitle">Projects</h1>
+      {isTitle && <h1 className="pageTitle">Projects</h1>}
       <div className="grid gap-4">
         {projectData?.map((project, index) => (
           <section
@@ -18,16 +24,20 @@ const Project = ({ seeMore }: { seeMore?: boolean }) => {
               {project?.title}
             </h1>
             <div className="grid gap-3 sm:gap-8 md:grid-cols-3 ">
-              <div className="col-span-2 md:col-span-1 flex items-center justify-center">
+              <div className="col-span-2 md:col-span-1 flex items-center justify-center text-center">
                 <img
                   src={project?.image[0]}
-                  alt=""
-                  className="min-h-full min-w-full"
+                  alt={
+                    !project?.image?.length
+                      ? "These is government project, I don't have to permission to use these any copy"
+                      : project?.title
+                  }
+                  className="min-w-full text-grayColor text-sm border border-gray-800 h-full w-full text-center"
                 />
               </div>
               <blockquote className="sm:col-span-2">
                 <p className="text-xs md:text-base text-grayColor">
-                  {project?.description} &nbsp;
+                  {project?.description?.slice(0, 2).join(" ")} &nbsp;
                   <Link
                     className="text-primaryColor"
                     to={`/project/${project.id}`}

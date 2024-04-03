@@ -7,7 +7,7 @@ const ProjectsPage = () => {
   useScrollToTop();
 
   return (
-    <PageLayout>
+    <PageLayout className="mt-5">
       <Project />
     </PageLayout>
   );

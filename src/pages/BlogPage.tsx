@@ -8,8 +8,8 @@ const BlogPage = ({ posts }: { posts: BlogPost[] }) => {
   useScrollToTop();
 
   return (
-    <PageLayout className="min-h-screen">
-      <Blog posts={posts} />
+    <PageLayout className="min-h-screen mt-12">
+      <Blog posts={posts} isTitle={false} />
     </PageLayout>
   );
 };

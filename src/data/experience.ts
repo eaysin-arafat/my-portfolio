@@ -1,6 +1,3 @@
-import etl from "../../public/company_icon/etl.svg";
-import fc from "../../public/company_icon/fc.png";
-
 type Experience = {
   date: string;
   title: string;
@@ -15,7 +12,6 @@ export const experienceData: ExperienceData = [
   {
     date: "March 2022 - 2023 January",
     title: "Freelance Corner",
-    icon: etl,
     location: "Natun Bazar, Sadar, Mymensingh",
     description: [
       "Leveraged my front-end development expertise to contribute to various websites built with React JS.",
@@ -25,7 +21,6 @@ export const experienceData: ExperienceData = [
   {
     date: "September 2023 - Current",
     title: "Excel Technologies Let.",
-    icon: fc,
     location: "House #13, Road #07 Block #F, Banani Dhaka-1213v",
     description: [
       "Frontend development on multiple projects using React.js.",

@@ -1,48 +1,26 @@
 export interface BlogPost {
   id: number;
-  frontmatter: {
-    title: string;
-    cover_image: string;
-    date: string;
-    excerpt: string;
-  };
-  slug?: string;
+  title: string;
+  cover_image: string;
+  date: string;
+  excerpt: string;
+  blogUrl: string;
 }
 
 export interface BlogProps {
   posts: BlogPost[];
   seeMore?: boolean;
+  isTitle?: boolean;
 }
 
 export const posts: BlogPost[] = [
   {
     id: 1,
-    frontmatter: {
-      title: "Post Title 1",
-      cover_image: "https://via.placeholder.com/600x400",
-      date: "2024-03-28",
-      excerpt: "This is the excerpt for post 1.",
-    },
-    slug: "post-title-1",
-  },
-  {
-    id: 1,
-    frontmatter: {
-      title: "Post Title 1",
-      cover_image: "https://via.placeholder.com/600x400",
-      date: "2024-03-28",
-      excerpt: "This is the excerpt for post 1.",
-    },
-    slug: "post-title-1",
-  },
-  {
-    id: 1,
-    frontmatter: {
-      title: "Post Title 1",
-      cover_image: "https://via.placeholder.com/600x400",
-      date: "2024-03-28",
-      excerpt: "This is the excerpt for post 1.",
-    },
-    slug: "post-title-1",
+    title: "Markup Language and HTML",
+    cover_image: "https://via.placeholder.com/600x400",
+    date: "Nov 22, 2023",
+    excerpt:
+      "This blog is about: What is Language? Language Type, What is Markup Language? What is does?",
+    blogUrl: "https://eaysin-arafat.hashnode.dev/markup-language-and-html",
   },
 ];

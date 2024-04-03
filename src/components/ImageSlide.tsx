@@ -34,7 +34,11 @@ const ImageSlider = ({ images }: { images: string[] }) => {
 
       <div className="relative h-80" style={{ width: "30rem" }}>
         <div className="absolute top-0">
-          <img src={images[currentIndex]} alt="image" className="rounded-sm" />
+          <img
+            src={images[currentIndex]}
+            alt="These is government project, I don't have to permission to use these any copy"
+            className="rounded-sm object-cover text-grayColor"
+          />
         </div>
       </div>
     </div>

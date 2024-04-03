@@ -2,6 +2,8 @@ import { useState } from "react";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { Link, useLocation } from "react-router-dom";
+import { accountUrl } from "../data/account_url";
+import { SiLeetcode } from "react-icons/si";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,13 +23,7 @@ const Navbar = () => {
                 <h1 className=" font-bold text-xl cursor-pointer">
                   <Link to="/" className="text-whiteColor">
                     <span>Eaysin</span>
-                    <span
-                      className={
-                        location.pathname === "/" ? "text-primaryColor" : ""
-                      }
-                    >
-                      Arafat
-                    </span>
+                    <span className={"text-primaryColor"}>Arafat</span>
                   </Link>
                 </h1>
               </div>
@@ -107,21 +103,19 @@ const Navbar = () => {
               </div>
               <div className="flex justify-center items-center flex-shrink-0 md:block">
                 <div className="flex space-x-4">
-                  <Link
-                    to="https://github.com/prasad-chavan1"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <Link to={accountUrl?.github} target="_blank">
                     <BsGithub
                       className="hidden md:block text-whiteColor"
                       size="2rem"
                     />
                   </Link>
-                  <Link
-                    to="https://www.linkedin.com/in/prasad-chavan2003/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <Link to={accountUrl?.leetCode} target="_blank">
+                    <SiLeetcode
+                      className="hidden md:block text-whiteColor"
+                      size="2rem"
+                    />
+                  </Link>
+                  <Link to={accountUrl?.linkedin} target="_blank">
                     <BsLinkedin
                       className="hidden md:block text-whiteColor"
                       size="2rem"
@@ -131,14 +125,14 @@ const Navbar = () => {
               </div>
             </div>
             <div onClick={handleMobileNav} className="mr-14 md:hidden">
-              <AiOutlineMenu size="2rem" />
+              <AiOutlineMenu className="text-whiteColor" size="2rem" />
             </div>
           </div>
         </div>
         <div className="md:hidden">
           <div
             className={
-              isOpen ? "fixed left-0 top-0 w-full h-screen bg-black/70" : ""
+              isOpen ? "fixed left-0 top-0 w-full h-screen bg-bgColor" : ""
             }
           >
             <div
@@ -152,9 +146,9 @@ const Navbar = () => {
                 <div className="flex w-full items-center justify-between">
                   <div
                     onClick={handleMobileNav}
-                    className="rounded shadow-lg shadow-gray-400 p-3 cursor-pointer"
+                    className="rounded bg-bgGrayColor shadow-md p-3 cursor-pointer"
                   >
-                    <AiOutlineClose />
+                    <AiOutlineClose className="text-whiteColor" />
                   </div>
                 </div>
               </div>
@@ -164,7 +158,7 @@ const Navbar = () => {
                     className={
                       location.pathname === "/"
                         ? "text-primaryColor"
-                        : "text-blue-500"
+                        : "text-whiteColor"
                     }
                     to="/"
                     onClick={handleMobileNav}
@@ -175,7 +169,7 @@ const Navbar = () => {
                     className={
                       location.pathname === "/about"
                         ? "text-primaryColor"
-                        : "text-blue-500"
+                        : "text-whiteColor"
                     }
                     to="/about"
                     onClick={handleMobileNav}
@@ -186,7 +180,7 @@ const Navbar = () => {
                     className={
                       location.pathname === "/projects"
                         ? "text-primaryColor"
-                        : "text-blue-500"
+                        : "text-whiteColor"
                     }
                     to="/projects"
                     onClick={handleMobileNav}
@@ -197,7 +191,7 @@ const Navbar = () => {
                     className={
                       location.pathname === "/experience"
                         ? "text-primaryColor"
-                        : "text-blue-500"
+                        : "text-whiteColor"
                     }
                     to="/experience"
                     onClick={handleMobileNav}
@@ -208,7 +202,7 @@ const Navbar = () => {
                     className={
                       location.pathname === "/open-source"
                         ? "text-primaryColor"
-                        : "text-blue-500"
+                        : "text-whiteColor"
                     }
                     to="/open-source"
                     onClick={handleMobileNav}
@@ -219,7 +213,7 @@ const Navbar = () => {
                     className={
                       location.pathname === "/blog"
                         ? "text-primaryColor"
-                        : "text-blue-500"
+                        : "text-whiteColor"
                     }
                     to="/blog"
                     onClick={handleMobileNav}
@@ -230,7 +224,7 @@ const Navbar = () => {
                     className={
                       location.pathname === "/contact"
                         ? "text-primaryColor"
-                        : "text-blue-500"
+                        : "text-whiteColor"
                     }
                     to="/contact"
                     onClick={handleMobileNav}
@@ -240,22 +234,14 @@ const Navbar = () => {
                 </div>
                 <div className="space-x-4 pt-20">
                   <div className="flex space-x-4">
-                    <div className="rounded shadow-lg shadow-gray-400 p-3 cursor-pointer">
-                      <Link
-                        to="https://github.com/prasad-chavan1"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <BsGithub size="2rem" />
+                    <div className="rounded bg-bgGrayColor p-3 cursor-pointer">
+                      <Link to={accountUrl?.github} target="_blank">
+                        <BsGithub className="text-whiteColor" size="2rem" />
                       </Link>
                     </div>
-                    <div className="rounded shadow-lg shadow-gray-400 p-3 cursor-pointer">
-                      <Link
-                        to="https://www.linkedin.com/in/prasad-chavan2003/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <BsLinkedin size="2rem" />
+                    <div className="rounded bg-bgGrayColor p-3 cursor-pointer">
+                      <Link to={accountUrl?.linkedin} target="_blank">
+                        <BsLinkedin className="text-whiteColor" size="2rem" />
                       </Link>
                     </div>
                   </div>

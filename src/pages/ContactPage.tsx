@@ -6,8 +6,8 @@ const ContactPage = () => {
   useScrollToTop();
 
   return (
-    <PageLayout className="h-screen">
-      <Contact />
+    <PageLayout className="h-screen mt-32">
+      <Contact isTitle={false} />
     </PageLayout>
   );
 };
