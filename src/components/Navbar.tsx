@@ -240,6 +240,12 @@ const Navbar = () => {
                       </Link>
                     </div>
                     <div className="rounded bg-bgGrayColor p-3 cursor-pointer">
+                      <Link to={accountUrl?.leetCode} target="_blank">
+                        <SiLeetcode className="text-whiteColor" size="2rem" />
+                      </Link>
+                    </div>
+
+                    <div className="rounded bg-bgGrayColor p-3 cursor-pointer">
                       <Link to={accountUrl?.linkedin} target="_blank">
                         <BsLinkedin className="text-whiteColor" size="2rem" />
                       </Link>
