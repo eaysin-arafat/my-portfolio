@@ -24,7 +24,7 @@ export default function ProjectPage() {
         </Link>
         <div className="mt-10 flex flex-col lg:block">
           <div className="block md:float-right pb-0 md:pb-1 ml-0 md:ml-4">
-            <ImageSlider images={project?.image} />
+            <ImageSlider project={project} />
           </div>
 
           <div className="">

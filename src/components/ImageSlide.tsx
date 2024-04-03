@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { RiArrowLeftSFill, RiArrowRightSFill } from "react-icons/ri";
+import { Project } from "../data/project";
 
-const ImageSlider = ({ images }: { images: string[] }) => {
+const ImageSlider = ({ project }: { project: Project }) => {
+  const images = project?.image;
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const previous = () => {
@@ -17,7 +19,7 @@ const ImageSlider = ({ images }: { images: string[] }) => {
   };
 
   return (
-    <div className="relative mx-auto max-w-2xl overflow-hidden rounded-sn bg-gray-100 p-2 sm:p-4">
+    <div className="relative mx-auto max-w-2xl overflow-hidden rounded-sn bg-bgGrayColor border border-gray-800 p-2 sm:p-4">
       <button
         onClick={previous}
         className="absolute left-2 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center"
@@ -33,10 +35,10 @@ const ImageSlider = ({ images }: { images: string[] }) => {
       </button>
 
       <div className="relative h-80" style={{ width: "30rem" }}>
-        <div className="absolute top-0">
+        <div className="absolute top-0 ">
           <img
-            src={images[currentIndex]}
-            alt="These is government project, I don't have to permission to use these any copy"
+            src={images?.[currentIndex]}
+            alt={project?.title}
             className="rounded-sm object-cover text-grayColor"
           />
         </div>
