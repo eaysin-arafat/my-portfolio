@@ -6,8 +6,11 @@ import Contact from "../components/Contact";
 import OpenSource from "../components/OpenSource";
 import Experience from "../components/Experience";
 import { posts } from "../data/blog";
+import useScrollToTop from "../hooks/useScrollToTop";
 
 const HomePage = () => {
+  useScrollToTop();
+
   const transformedPosts = posts.map((post) => post);
 
   return (

@@ -1,4 +1,8 @@
+import useScrollToTop from "../hooks/useScrollToTop";
+
 const Error404 = () => {
+  useScrollToTop();
+
   return (
     <section className="flex items-center text-black">
       <div className="h-screen container flex flex-col items-center justify-center px-5 mx-auto my-8">

@@ -2,8 +2,10 @@ import { Link, useParams } from "react-router-dom";
 import { projectData } from "../data/project";
 import PageLayout from "../layout/PageLayout";
 import ImageSlider from "../components/ImageSlide";
+import useScrollToTop from "../hooks/useScrollToTop";
 
 export default function ProjectPage() {
+  useScrollToTop();
   const { id } = useParams();
   const project = projectData.find((p) => p.id === Number(id));
 
@@ -14,7 +16,10 @@ export default function ProjectPage() {
   return (
     <PageLayout className="min-h-screen">
       <div className="pt-20">
-        <Link to="/projects" className="btn !bg-slate-700 !text-whiteColor">
+        <Link
+          to="/projects"
+          className="btn !bg-neutral-800 hover:!bg-neutral-700 transition-all"
+        >
           Go Back
         </Link>
         <div className="mt-10 flex flex-col lg:block">

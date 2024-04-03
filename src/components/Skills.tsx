@@ -1,18 +1,33 @@
-import { FaHtml5 } from "react-icons/fa";
-import { FaCss3Alt } from "react-icons/fa";
-import { FaReact } from "react-icons/fa";
-import { SiTailwindcss } from "react-icons/si";
-import { SkillsData } from "../data/skill";
+import { FaGithub, FaNpm, FaReact, FaYarn } from "react-icons/fa";
+import { IoLogoJavascript, IoLogoNodejs } from "react-icons/io";
+import { SiTypescript, SiWebpack } from "react-icons/si";
+import { TbBrandRedux } from "react-icons/tb";
 
-const skillsData: SkillsData = [
+const skillsData = [
   {
-    category: "Frontend",
+    category: "Programming Language",
     skills: [
-      { icon: <FaReact size="40px" />, name: "React" },
-      { name: "Bluma CSS" },
-      { icon: <FaHtml5 size="40px" />, name: "HTML" },
-      { icon: <FaCss3Alt size="40px" />, name: "CSS" },
-      { icon: <SiTailwindcss size="40px" />, name: "Tailwind CSS" },
+      { icon: <IoLogoJavascript size={"24px"} />, name: "JavaScript" },
+      { icon: <SiTypescript size="24px" />, name: "TypeScript" },
+    ],
+  },
+  {
+    category: "Framework",
+    skills: [
+      { icon: <FaReact size="24px" />, name: "ReactJS " },
+      { icon: <TbBrandRedux size="24px" />, name: "Redux Toolkit" },
+      { icon: null, name: "RTK Query" },
+    ],
+  },
+  {
+    category: "Others",
+    skills: [
+      { icon: <IoLogoNodejs size="24px" />, name: "NodeJS (basic)" },
+      { icon: <SiWebpack size="24px" />, name: "Webpack" },
+      { icon: <FaGithub size="24px" />, name: "Git & GitHub" },
+      { icon: <FaNpm size="24px" />, name: "NPM" },
+      { icon: <FaYarn size="24px" />, name: "Yarn" },
+      // { icon: null, name: "Little Photoshop experience" },
     ],
   },
 ];
@@ -21,7 +36,7 @@ const Skills = () => {
   return (
     <div className="w-full">
       <h1 className="text-primaryColor font-bold text-center mb-7">Skills</h1>
-      <div className="mx-auto flex flex-col justify-center">
+      <div className="mx-auto flex flex-col gap-3 justify-center">
         {skillsData.map((category, index) => (
           <ul
             key={index}
@@ -35,7 +50,7 @@ const Skills = () => {
                 key={idx}
                 className="text-xl font-bold flex justify-center items-center flex-col text-whiteColor"
               >
-                {skill.icon}
+                {skill.icon && <span className="mr-2">{skill.icon}</span>}
                 {skill.name}
               </li>
             ))}

@@ -28,14 +28,14 @@ const About = () => {
             </h1>
 
             <h2 className="font-bold text-3xl text-left mb-5 text-whiteColor">
-              I&#39;m a<span className="text-primaryColor"> {role}</span> with a
-              passion for
-              <span className="text-primaryColor"> {passion}</span>.
+              I am a <span className="text-primaryColor">{role}</span>,
+              specializing in{" "}
+              <span className="text-primaryColor">{passion}</span>.
             </h2>
           </div>
 
           <p className="text-left font-normal flex-wrap text-grayColor">
-            {description}
+            {description} &nbsp;
             <Link to={githubLink} className="underline text-blue-500">
               here
             </Link>
