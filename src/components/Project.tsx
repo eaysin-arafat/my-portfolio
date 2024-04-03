@@ -23,7 +23,7 @@ const Project = ({
             <h1 className="font-bold text-lg md:text-xl text-primaryColor pb-4">
               {project?.title}
             </h1>
-            <div className="grid gap-3 sm:gap-8 md:grid-cols-3 ">
+            <div className="grid gap-3 sm:gap-8 md:grid-cols-3">
               <div className="col-span-2 md:col-span-1 flex items-center justify-center text-center">
                 <img
                   src={project?.image[0]}
@@ -37,11 +37,11 @@ const Project = ({
                   }`}
                 />
               </div>
-              <blockquote className="sm:col-span-2">
+              <blockquote className="col-span-2">
                 <p className="text-xs md:text-base text-grayColor">
                   {project?.description?.slice(0, 2).join(" ")} &nbsp;
                   <Link
-                    className="text-primaryColor"
+                    className="text-primaryColor whitespace-nowrap"
                     to={`/project/${project.id}`}
                   >
                     See more

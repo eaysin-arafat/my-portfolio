@@ -20,7 +20,7 @@ const Navbar = () => {
           <div className="flex items-center h-20 w-full ">
             <div className="flex items-center mx-10 justify-between w-full">
               <div className="flex justify-center items-center flex-shrink-0 ">
-                <h1 className=" font-bold text-xl cursor-pointer">
+                <h1 className="font-bold md:text-base lg:text-xl cursor-pointer">
                   <Link to="/" className="text-whiteColor">
                     <span>Eaysin</span>
                     <span className={"text-primaryColor"}>Arafat</span>
@@ -28,7 +28,7 @@ const Navbar = () => {
                 </h1>
               </div>
               <div className="hidden md:block">
-                <div className="flex items-baseline space-x-10 font-semibold mt-1">
+                <div className="flex items-baseline md:space-x-3 lg:space-x-5 md:font-medium lg:font-semibold  md:text-sm lg:text-lg mt-1">
                   <Link
                     className={
                       location.pathname === "/"
@@ -106,19 +106,19 @@ const Navbar = () => {
                   <Link to={accountUrl?.github} target="_blank">
                     <BsGithub
                       className="hidden md:block text-whiteColor"
-                      size="2rem"
+                      size="1.5rem"
                     />
                   </Link>
                   <Link to={accountUrl?.leetCode} target="_blank">
                     <SiLeetcode
                       className="hidden md:block text-whiteColor"
-                      size="2rem"
+                      size="1.5rem"
                     />
                   </Link>
                   <Link to={accountUrl?.linkedin} target="_blank">
                     <BsLinkedin
                       className="hidden md:block text-whiteColor"
-                      size="2rem"
+                      size="1.5rem"
                     />
                   </Link>
                 </div>

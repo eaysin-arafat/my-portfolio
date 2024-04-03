@@ -15,6 +15,8 @@ const ImageSlider = ({ project }: { project: Project }) => {
   const forward = () => {
     if (currentIndex < images.length - 1) {
       setCurrentIndex(currentIndex + 1);
+    } else {
+      setCurrentIndex(0);
     }
   };
 
@@ -34,7 +36,7 @@ const ImageSlider = ({ project }: { project: Project }) => {
         <RiArrowRightSFill className="text-2xl font-bold text-gray-500" />
       </button>
 
-      <div className="relative h-80" style={{ width: "30rem" }}>
+      <div className="relative h-80 min-w-full" style={{ width: "30rem" }}>
         <div
           className={`absolute top-0 border border-gray-800 h-full w-full ${
             !images?.length && "px-2 py-2"
@@ -47,7 +49,7 @@ const ImageSlider = ({ project }: { project: Project }) => {
                 ? "These are government projects for which I don't have permission to use or copy any content"
                 : project?.title
             }
-            className="rounded-sm object-cover text-grayColor h-full w-full"
+            className="min-w-full min-h-full"
           />
         </div>
       </div>
