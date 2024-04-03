@@ -32,7 +32,9 @@ const Project = ({
                       ? project?.title
                       : "These are government projects for which I don't have permission to use or copy any content"
                   }
-                  className="min-w-full text-grayColor text-sm border border-gray-800 h-full w-full text-center"
+                  className={`min-w-full min-h-full text-grayColor text-sm border border-gray-800 text-center  ${
+                    project?.image?.length ? "" : "px-1 py-5"
+                  }`}
                 />
               </div>
               <blockquote className="sm:col-span-2">
