@@ -1,62 +1,6 @@
 import RootLayout from "../layout/RootLayout";
 import { IoMdGitPullRequest } from "react-icons/io";
 
-const pullRequest = [
-  {
-    state: "OPEN",
-    url: "https://github.com/user/repo/pull/123",
-    title: "Fix a bug in the login form",
-    changedFiles: 2,
-    createdAt: "2024-04-03T10:00:00Z",
-    baseRepository: {
-      url: "https://github.com/user/repo",
-      owner: {
-        login: "user",
-      },
-      name: "repo",
-    },
-    additions: 15,
-    deletions: 5,
-  },
-  {
-    state: "MERGED",
-    url: "https://github.com/user/another-repo/pull/456",
-    title: "Add a new feature for better user experience",
-    changedFiles: 10,
-    createdAt: "2024-03-28T15:30:00Z",
-    baseRepository: {
-      url: "https://github.com/user/another-repo",
-      owner: {
-        login: "user",
-      },
-      name: "another-repo",
-    },
-    additions: 80,
-    deletions: 20,
-    mergedBy: {
-      login: "reviewer",
-      url: "https://github.com/reviewer",
-      avatarUrl: "https://avatars.githubusercontent.com/reviewer",
-    },
-  },
-  {
-    state: "CLOSED", // Test case for default state
-    url: "https://github.com/another-user/different-repo/pull/789",
-    title: "Update documentation for the latest release",
-    changedFiles: 3,
-    createdAt: "2024-03-20T09:00:00Z",
-    baseRepository: {
-      url: "https://github.com/another-user/different-repo",
-      owner: {
-        login: "another-user",
-      },
-      name: "different-repo",
-    },
-    additions: 2,
-    deletions: 1,
-  },
-];
-
 const OpenSource = ({ isTitle }: { isTitle?: boolean }) => {
   return (
     <RootLayout className="mt-3">
