@@ -16,11 +16,9 @@ const contactSchema = yup.object().shape({
 const Contact = ({ isTitle }: { isTitle?: boolean }) => {
   const formRef = useRef<HTMLFormElement | null>(null);
 
-  const SERVICE_ID_ = import.meta.env.SERVICE_ID;
-  const PUBLIC_KEY = import.meta.env.PUBLIC_KEY;
-
-  console.log("ss", SERVICE_ID_);
-  console.log(PUBLIC_KEY);
+  const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
+  const PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY;
+  const TAMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
 
   const onSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
@@ -30,17 +28,9 @@ const Contact = ({ isTitle }: { isTitle?: boolean }) => {
 
       if (contactSchema.isValidSync(Object.fromEntries(formData))) {
         emailjs
-          .sendForm(
-            // import.meta.env.SERVICE_ID,
-            // import.meta.env.TEMPLATE_ID,
-            "service_womj1hn",
-            "template_6kca3d9",
-            formRef.current,
-            {
-              publicKey: "pqxjk8SFtfGw-by0G",
-              // publicKey: import.meta.env.PUBLIC_KEY,
-            }
-          )
+          .sendForm(SERVICE_ID, TAMPLATE_ID, formRef.current, {
+            publicKey: PUBLIC_KEY,
+          })
           .then(
             (response) => {
               formRef?.current?.reset();

@@ -48,7 +48,8 @@ export const projectData: ProjectData = [
       "RTK Query",
       "Tailwind Css",
     ],
-    githubLink: "https://github.com/dev-Anamul/carepro.web",
+    githubLink: "",
+    // githubLink: "https://github.com/dev-Anamul/carepro.web",
     externalLink: "https://addons.mozilla.org/addon/wordy-birdy-scramble-game/",
   },
   {
@@ -80,7 +81,8 @@ export const projectData: ProjectData = [
       "RTK Query",
       "Tailwind Css",
     ],
-    githubLink: "https://github.com/amirhamja4bd/tuso.web",
+    githubLink: "",
+    // githubLink: "https://github.com/amirhamja4bd/tuso.web",
     externalLink: "https://addons.mozilla.org/addon/wordy-birdy-scramble-game/",
   },
   {

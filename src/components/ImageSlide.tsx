@@ -19,7 +19,7 @@ const ImageSlider = ({ project }: { project: Project }) => {
   };
 
   return (
-    <div className="relative mx-auto max-w-2xl overflow-hidden rounded-sn bg-bgGrayColor border border-gray-800 p-2 sm:p-4">
+    <div className="relative mx-auto max-w-2xl overflow-hidden rounded-sn p-2 sm:p-4">
       <button
         onClick={previous}
         className="absolute left-2 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center"
@@ -35,11 +35,19 @@ const ImageSlider = ({ project }: { project: Project }) => {
       </button>
 
       <div className="relative h-80" style={{ width: "30rem" }}>
-        <div className="absolute top-0 ">
+        <div
+          className={`absolute top-0 border border-gray-800 h-full w-full ${
+            !images?.length && "px-2 py-2"
+          }`}
+        >
           <img
             src={images?.[currentIndex]}
-            alt={project?.title}
-            className="rounded-sm object-cover text-grayColor"
+            alt={
+              !images?.length
+                ? "These are government projects for which I don't have permission to use or copy any content"
+                : project?.title
+            }
+            className="rounded-sm object-cover text-grayColor h-full w-full"
           />
         </div>
       </div>

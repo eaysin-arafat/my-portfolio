@@ -27,7 +27,11 @@ const Project = ({
               <div className="col-span-2 md:col-span-1 flex items-center justify-center text-center">
                 <img
                   src={project?.image[0]}
-                  alt={project?.title}
+                  alt={
+                    project?.image?.length
+                      ? project?.title
+                      : "These are government projects for which I don't have permission to use or copy any content"
+                  }
                   className="min-w-full text-grayColor text-sm border border-gray-800 h-full w-full text-center"
                 />
               </div>
