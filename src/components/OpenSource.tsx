@@ -14,9 +14,12 @@ const OpenSource = ({ isTitle }: { isTitle?: boolean }) => {
           className={`p-3 rounded-sm bg-bgGrayColor`}
           style={{ border: `1px solid` }}
         >
-          <div className="grid grid-cols-8">
+          <div className="flex flex-col gap-2 lg:gap-0 lg:grid grid-cols-8 ">
             <div className="flex justify-center gap-3 col-span-7">
-              <IoMdGitPullRequest className="mt-1.5 text-primaryColor" />
+              <IoMdGitPullRequest
+                size={24}
+                className="lg:mt-1.5 text-primaryColor"
+              />
               <div className="space-y-1.5">
                 <div>
                   <a
@@ -44,13 +47,15 @@ const OpenSource = ({ isTitle }: { isTitle?: boolean }) => {
                 </p>
               </div>
             </div>
-            <div className="flex gap-1 col-span-1">
+            <div className="flex gap-1 col-span-1 ml-7 md:ml-8 lg:ml-0">
               <p
-                className={`text-whiteColor bg-primaryColor h-fit rounded-sm flex items-center justify-center pb-[2px] px-[2px] text-sm`}
+                className={`text-whiteColor bg-primaryColor h-fit rounded-sm flex items-center justify-center lg:pb-[2px] px-[2px] text-sm font-semibold`}
               >
                 2
               </p>
-              <p className="text-grayColor text-sm">Files Changed</p>
+              <p className="text-grayColor text-sm !font-semibold">
+                Files Changed
+              </p>
             </div>
           </div>
         </div>
