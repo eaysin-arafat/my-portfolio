@@ -1,19 +1,12 @@
 import { aboutData } from "../data/about";
+import { intruductionData } from "../data/personal";
 import RootLayout from "../layout/RootLayout";
 import Skills from "./Skills";
-import { Link } from "react-router-dom";
 
 const About = ({ isTitle }: { isTitle?: boolean }) => {
-  const {
-    pageTitle,
-    greetings,
-    name,
-    role,
-    passion,
-    description,
-    githubLink,
-    interests,
-  } = aboutData;
+  const { pageTitle, greetings, name, role, passion, description, interests } =
+    aboutData;
+  const { resumeLink } = intruductionData;
 
   return (
     <RootLayout>
@@ -36,9 +29,13 @@ const About = ({ isTitle }: { isTitle?: boolean }) => {
 
           <p className="text-left font-normal flex-wrap text-grayColor">
             {description} &nbsp;
-            <Link to={githubLink} className="underline text-blue-500">
-              here
-            </Link>
+            <a
+              href={resumeLink}
+              target="_blank"
+              className="underline text-blue-500"
+            >
+              resume
+            </a>
           </p>
           <p className="text-left font-normal mb-5 flex-wrap"></p>
           <p className="text-left font-normal mb-3 flex-wrap text-grayColor">

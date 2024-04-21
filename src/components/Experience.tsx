@@ -12,8 +12,8 @@ const Experience = ({ isTitle }: { isTitle?: boolean }) => {
             className="bg-bgGrayColor shadow-md rounded-md flex flex-col md:flex-row justify-start gap-5 p-5"
           >
             <div className="flex flex-col gap-1">
-              <div className="ml-4">
-                <p className="text-whiteColor font-semibold text-sm">
+              <div className="">
+                <p className="text-whiteColor font-semibold text-sm  mb-1">
                   {experience.date}
                 </p>
                 <div className="block justify-between mb-1">
@@ -26,12 +26,8 @@ const Experience = ({ isTitle }: { isTitle?: boolean }) => {
                 </div>
               </div>
               <div>
-                <ul className="list pl-4 list-disc space-y-2">
-                  {experience?.description?.map((desc) => (
-                    <li key={desc} className="text-grayColor">
-                      {desc}
-                    </li>
-                  ))}
+                <ul className="space-y-2">
+                  <li className="text-grayColor">{experience.description}</li>
                 </ul>
               </div>
             </div>

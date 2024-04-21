@@ -1,4 +1,3 @@
-import Intruduction from "../components/Intruduction";
 import About from "../components/About";
 import Projects from "../components/Project";
 import Blog from "../components/Blog";
@@ -14,14 +13,15 @@ const HomePage = () => {
   const transformedPosts = posts.map((post) => post);
 
   return (
-    <div className="">
-      <Intruduction />
-      <About isTitle={true} />
-      <Projects seeMore isTitle={true} />
-      <Experience isTitle={true} />
-      <OpenSource isTitle={true} />
-      <Blog posts={transformedPosts} seeMore isTitle={true} />
-      <Contact isTitle={true} />
+    <div>
+      <div className="pt-32">
+        <About isTitle={false} />
+        <Projects seeMore isTitle={true} />
+        <Experience isTitle={true} />
+        <OpenSource isTitle={true} />
+        <Blog posts={transformedPosts} seeMore isTitle={true} />
+        <Contact isTitle={true} />
+      </div>
     </div>
   );
 };
