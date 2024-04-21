@@ -11,14 +11,14 @@ const Experience = ({ isTitle }: { isTitle?: boolean }) => {
             key={index}
             className="bg-bgGrayColor shadow-md rounded-md flex flex-col md:flex-row justify-start gap-5 p-5"
           >
-            <div className="flex flex-col gap-1">
-              <div className="">
-                <p className="text-whiteColor font-semibold text-sm  mb-1">
-                  {experience.date}
-                </p>
+            <div className="flex flex-col gap-1 w-full">
+              <div className="w-full">
                 <div className="block justify-between mb-1">
-                  <h2 className="text-xl md:text-2xl font-bold text-primaryColor mb-1">
+                  <h2 className="text-xl md:text-2xl font-bold text-primaryColor mb-1 flex justify-between">
                     {experience.title}
+                    <p className="text-whiteColor font-semibold text-sm  mb-1">
+                      {experience.date}
+                    </p>
                   </h2>
                   <p className="text-grayColor text-xs">
                     {experience.location}

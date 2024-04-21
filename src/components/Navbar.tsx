@@ -17,8 +17,8 @@ const Navbar = () => {
     <div>
       <nav className="fixed z-20 w-full bg-bgColor">
         <div className="w-full">
-          <div className="flex items-center h-20 w-full ">
-            <div className="flex items-center mx-10 justify-between w-full">
+          <div className="flex items-center h-20 w-full">
+            <div className="flex items-center mx-5 justify-between w-full">
               <div className="flex justify-center items-center flex-shrink-0 ">
                 <h1 className="font-bold md:text-base lg:text-xl cursor-pointer">
                   <Link to="/" className="text-whiteColor">
@@ -124,7 +124,7 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
-            <div onClick={handleMobileNav} className="mr-14 md:hidden">
+            <div onClick={handleMobileNav} className="mr-5 md:hidden">
               <AiOutlineMenu className="text-whiteColor" size="2rem" />
             </div>
           </div>

@@ -10,7 +10,7 @@ type ExperienceData = Experience[];
 
 export const experienceData: ExperienceData = [
   {
-    date: "October 2022 - 2023 April",
+    date: "October 2022 - April 2023",
     title: "Freelance Corner",
     location: "Natun Bazar, Sadar, Mymensingh",
     description:

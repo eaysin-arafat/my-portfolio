@@ -1,8 +1,8 @@
 import { Link, useParams } from "react-router-dom";
 import { projectData } from "../data/project";
 import PageLayout from "../layout/PageLayout";
-import ImageSlider from "../components/ImageSlide";
 import useScrollToTop from "../hooks/useScrollToTop";
+import Images from "../components/Images";
 
 export default function ProjectPage() {
   useScrollToTop();
@@ -24,7 +24,9 @@ export default function ProjectPage() {
         </Link>
         <div className="mt-10 flex flex-col lg:block">
           <div className="block md:float-right pb-0 md:pb-1 ml-0 md:ml-4">
-            <ImageSlider project={project} />
+            <div className="h-[200px] sm:h-[280px] sm:w-[500px] my-0 mx-auto">
+              <Images slides={project.image} />
+            </div>
           </div>
 
           <div className="">

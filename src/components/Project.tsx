@@ -26,7 +26,7 @@ const Project = ({
             <div className="grid gap-3 sm:gap-8 md:grid-cols-3">
               <div className="col-span-2 md:col-span-1 flex items-center justify-center text-center">
                 <img
-                  src={project?.image[0]}
+                  src={project.image.length ? project?.image[0].url : ""}
                   alt={
                     project?.image?.length
                       ? project?.title

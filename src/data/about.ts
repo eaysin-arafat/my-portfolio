@@ -13,7 +13,7 @@ type AboutData = {
 
 export const aboutData: AboutData = {
   pageTitle: "About Me",
-  greetings: "Hello",
+  greetings: "Hi",
   name: "Eaysin Arafat",
   role: "React Developer",
   passion: "Frontend Development",

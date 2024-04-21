@@ -2,7 +2,7 @@ export type Project = {
   id: number;
   title: string;
   description: string[];
-  image: string[];
+  image: { url: string; title: string }[];
   technologies: string[];
   githubLink: string;
   externalLink: string;
@@ -21,25 +21,67 @@ export const projectData: ProjectData = [
       "Collaborated effectively with team members and stakeholders to meet project objectives and comply with government regulations.",
     ],
     image: [
-      // "/project-image/healthcare/Screenshot_1.png",
-      // "/project-image/healthcare/Screenshot_2.png",
-      // "/project-image/healthcare/Screenshot_3.png",
-      // "/project-image/healthcare/Screenshot_4.png",
-      // "/project-image/healthcare/Screenshot_5.png",
-      // "/project-image/healthcare/Screenshot_6.png",
-      // "/project-image/healthcare/Screenshot_7.png",
-      // "/project-image/healthcare/Screenshot_8.png",
-      // "/project-image/healthcare/Screenshot_9.png",
-      // "/project-image/healthcare/Screenshot_10.png",
-      // "/project-image/healthcare/Screenshot_11.png",
-      // "/project-image/healthcare/Screenshot_12.png",
-      // "/project-image/healthcare/Screenshot_13.png",
-      // "/project-image/healthcare/Screenshot_14.png",
-      // "/project-image/healthcare/Screenshot_15.png",
-      // "/project-image/healthcare/Screenshot_16.png",
-      // "/project-image/healthcare/Screenshot_17.png",
-      // "/project-image/healthcare/Screenshot_18.png",
-      // "/project-image/healthcare/Screenshot_19.png",
+      // { url: "/project-image/healthcare/Screenshot_1.png", title: "beach" },
+      // { url: "/project-image/healthcare/Screenshot_2.png", title: "boat" },
+      // { url: "/project-image/healthcare/Screenshot_3.png", title: "forest" },
+      // { url: "/project-image/healthcare/Screenshot_4.png", title: "city" },
+      // { url: "/project-image/healthcare/Screenshot_5.png", title: "italy" },
+      // {
+      //   url: "/project-image/healthcare/Screenshot_6.png",
+      //   title: "screenshot 6",
+      // },
+      // {
+      //   url: "/project-image/healthcare/Screenshot_7.png",
+      //   title: "screenshot 7",
+      // },
+      // {
+      //   url: "/project-image/healthcare/Screenshot_8.png",
+      //   title: "screenshot 8",
+      // },
+      // {
+      //   url: "/project-image/healthcare/Screenshot_9.png",
+      //   title: "screenshot 9",
+      // },
+      // {
+      //   url: "/project-image/healthcare/Screenshot_10.png",
+      //   title: "screenshot 10",
+      // },
+      // {
+      //   url: "/project-image/healthcare/Screenshot_11.png",
+      //   title: "screenshot 11",
+      // },
+      // {
+      //   url: "/project-image/healthcare/Screenshot_12.png",
+      //   title: "screenshot 12",
+      // },
+      // {
+      //   url: "/project-image/healthcare/Screenshot_13.png",
+      //   title: "screenshot 13",
+      // },
+      // {
+      //   url: "/project-image/healthcare/Screenshot_14.png",
+      //   title: "screenshot 14",
+      // },
+      // {
+      //   url: "/project-image/healthcare/Screenshot_15.png",
+      //   title: "screenshot 15",
+      // },
+      // {
+      //   url: "/project-image/healthcare/Screenshot_16.png",
+      //   title: "screenshot 16",
+      // },
+      // {
+      //   url: "/project-image/healthcare/Screenshot_17.png",
+      //   title: "screenshot 17",
+      // },
+      // {
+      //   url: "/project-image/healthcare/Screenshot_18.png",
+      //   title: "screenshot 18",
+      // },
+      // {
+      //   url: "/project-image/healthcare/Screenshot_19.png",
+      //   title: "screenshot 19",
+      // },
     ],
     technologies: [
       "TypeScript",
@@ -54,7 +96,7 @@ export const projectData: ProjectData = [
   },
   {
     id: 2,
-    title: "Problem Managemen System",
+    title: "Help Desk",
     description: [
       "Developed a problem management system adaptable for various projects or institutions.",
       "Implemented role-based relationships to facilitate efficient problem resolution, ensuring the right individuals have appropriate access levels.",
@@ -64,15 +106,42 @@ export const projectData: ProjectData = [
       "Integrated a client-to-administrator messaging system within the application for streamlined communication.",
     ],
     image: [
-      // "/project-image/problem-management/Screenshot_1.png",
-      // "/project-image/problem-management/Screenshot_2.png",
-      // "/project-image/problem-management/Screenshot_3.png",
-      // "/project-image/problem-management/Screenshot_4.png",
-      // "/project-image/problem-management/Screenshot_5.png",
-      // "/project-image/problem-management/Screenshot_6.png",
-      // "/project-image/problem-management/Screenshot_7.png",
-      // "/project-image/problem-management/Screenshot_8.png",
-      // "/project-image/problem-management/Screenshot_20.png",
+      // {
+      //   url: "/project-image/problem-management/Screenshot_1.png",
+      //   title: "screenshot 1",
+      // },
+      // {
+      //   url: "/project-image/problem-management/Screenshot_2.png",
+      //   title: "screenshot 2",
+      // },
+      // {
+      //   url: "/project-image/problem-management/Screenshot_3.png",
+      //   title: "screenshot 3",
+      // },
+      // {
+      //   url: "/project-image/problem-management/Screenshot_4.png",
+      //   title: "screenshot 4",
+      // },
+      // {
+      //   url: "/project-image/problem-management/Screenshot_5.png",
+      //   title: "screenshot 5",
+      // },
+      // {
+      //   url: "/project-image/problem-management/Screenshot_6.png",
+      //   title: "screenshot 6",
+      // },
+      // {
+      //   url: "/project-image/problem-management/Screenshot_7.png",
+      //   title: "screenshot 7",
+      // },
+      // {
+      //   url: "/project-image/problem-management/Screenshot_8.png",
+      //   title: "screenshot 8",
+      // },
+      // {
+      //   url: "/project-image/problem-management/Screenshot_20.png",
+      //   title: "screenshot 20",
+      // },
     ],
     technologies: [
       "Typescript",
@@ -93,7 +162,7 @@ export const projectData: ProjectData = [
       "JavaScript library which provides utility functions for common programming tasks using the functional programming paradigm.",
       "It can be broken down into several main areas: Utilities, Function, String, Array, Collection, Object, Sequence.",
     ],
-    image: [""],
+    image: [],
     technologies: ["JavaScript"],
     githubLink: "https://github.com/eaysin-arafat/js-utility",
     externalLink: "https://addons.mozilla.org/addon/wordy-birdy-scramble-game/",
@@ -109,15 +178,42 @@ export const projectData: ProjectData = [
       "Employed JavaScript to enhance user interactions and provide dynamic functionality throughout the platform.",
     ],
     image: [
-      "/project-image/comfy_store/Screenshot_1.png",
-      "/project-image/comfy_store/Screenshot_2.png",
-      "/project-image/comfy_store/Screenshot_3.png",
-      "/project-image/comfy_store/Screenshot_4.png",
-      "/project-image/comfy_store/Screenshot_5.png",
-      "/project-image/comfy_store/Screenshot_6.png",
-      "/project-image/comfy_store/Screenshot_7.png",
-      "/project-image/comfy_store/Screenshot_8.png",
-      "/project-image/comfy_store/Screenshrrot_2.png",
+      {
+        url: "/project-image/comfy_store/Screenshot_1.png",
+        title: "screenshot 1",
+      },
+      {
+        url: "/project-image/comfy_store/Screenshot_2.png",
+        title: "screenshot 2",
+      },
+      {
+        url: "/project-image/comfy_store/Screenshot_3.png",
+        title: "screenshot 3",
+      },
+      {
+        url: "/project-image/comfy_store/Screenshot_4.png",
+        title: "screenshot 4",
+      },
+      {
+        url: "/project-image/comfy_store/Screenshot_5.png",
+        title: "screenshot 5",
+      },
+      {
+        url: "/project-image/comfy_store/Screenshot_6.png",
+        title: "screenshot 6",
+      },
+      {
+        url: "/project-image/comfy_store/Screenshot_7.png",
+        title: "screenshot 7",
+      },
+      {
+        url: "/project-image/comfy_store/Screenshot_8.png",
+        title: "screenshot 8",
+      },
+      {
+        url: "/project-image/comfy_store/Screenshot_9.png",
+        title: "screenshot 9",
+      },
     ],
     technologies: ["JavaScript", "React JS", "Redux Toolkit", "Tailwind Css"],
     githubLink: "https://github.com/eaysin-arafat/ecommarce_app_comfy_store",

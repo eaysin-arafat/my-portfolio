@@ -13,7 +13,7 @@ const About = ({ isTitle }: { isTitle?: boolean }) => {
       {isTitle && <h1 className="pageTitle">{pageTitle}</h1>}
 
       <div>
-        <div className="flex flex-col">
+        <div className="flex flex-col mx-5">
           <div className="mb-5">
             <h1 className="text-3xl font-bold sm:text-4xl mb-8 text-whiteColor">
               {greetings}, I&#39;m{" "}
@@ -21,7 +21,7 @@ const About = ({ isTitle }: { isTitle?: boolean }) => {
             </h1>
 
             <h2 className="font-bold text-3xl text-left mb-5 text-whiteColor">
-              I am a <span className="text-primaryColor">{role}</span>,
+              I&#39;m a <span className="text-primaryColor">{role}</span>,
               specializing in{" "}
               <span className="text-primaryColor">{passion}</span>.
             </h2>
