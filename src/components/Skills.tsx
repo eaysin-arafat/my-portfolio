@@ -12,7 +12,7 @@ const skillsData = [
     ],
   },
   {
-    category: "Framework",
+    category: "Libraries & Frameworks",
     skills: [
       { icon: <FaReact size="24px" />, name: "ReactJS " },
       { icon: <TbBrandRedux size="24px" />, name: "Redux Toolkit" },
