@@ -230,19 +230,19 @@ export const projectData: ProjectData = [
     ],
     image: [
       {
-        url: "/project-image/file_drive/file-drive-10.png",
+        url: "/project-image/file_drive/file-drive-01.png",
         title: "screenshot 1",
       },
       {
-        url: "/project-image/file_drive/file-drive-08.png",
+        url: "/project-image/file_drive/file-drive-02.png",
         title: "screenshot 2",
       },
       {
-        url: "/project-image/file_drive/file-drive-07.png",
+        url: "/project-image/file_drive/file-drive-03.png",
         title: "screenshot 3",
       },
       {
-        url: "/project-image/file_drive/file-drive-06.png",
+        url: "/project-image/file_drive/file-drive-04.png",
         title: "screenshot 4",
       },
       {
@@ -250,15 +250,19 @@ export const projectData: ProjectData = [
         title: "screenshot 5",
       },
       {
-        url: "/project-image/file_drive/file-drive-04.png",
+        url: "/project-image/file_drive/file-drive-06.png",
         title: "screenshot 6",
       },
       {
-        url: "/project-image/file_drive/file-drive-2.png",
+        url: "/project-image/file_drive/file-drive-07.png",
         title: "screenshot 8",
       },
       {
-        url: "/project-image/file_drive/file-drive-1.png",
+        url: "/project-image/file_drive/file-drive-08.png",
+        title: "screenshot 9",
+      },
+      {
+        url: "/project-image/file_drive/file-drive-09.png",
         title: "screenshot 9",
       },
     ],

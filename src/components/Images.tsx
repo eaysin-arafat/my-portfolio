@@ -6,17 +6,15 @@ const Images = ({ slides }: { slides: { url: string; title: string }[] }) => {
 
   const goToPrevious = () => {
     const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
+    const newIndex = isFirstSlide ? slides?.length - 1 : currentIndex - 1;
     setCurrentIndex(newIndex);
   };
 
   const goToNext = () => {
-    const isLastSlide = currentIndex === slides.length - 1;
+    const isLastSlide = currentIndex === slides?.length - 1;
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
   };
-
-  console.log("currentIndex", currentIndex);
 
   return (
     <div className="relative h-full">
@@ -35,7 +33,7 @@ const Images = ({ slides }: { slides: { url: string; title: string }[] }) => {
       <div
         className="w-full h-full !transition-opacity !duration-500"
         style={{
-          backgroundImage: `url(${slides[currentIndex].url})`,
+          backgroundImage: `url(${slides[currentIndex]?.url})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           borderRadius: "2px",
