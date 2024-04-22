@@ -12,7 +12,7 @@ export type ProjectData = Project[];
 
 export const projectData: ProjectData = [
   {
-    id: 1,
+    id: 0,
     title: "Health Care Ecosystem",
     description: [
       "Contributed to the development of a government-sponsored healthcare ecosystem project within a collaborative team environment.",
@@ -95,7 +95,7 @@ export const projectData: ProjectData = [
     externalLink: "https://addons.mozilla.org/addon/wordy-birdy-scramble-game/",
   },
   {
-    id: 2,
+    id: 1,
     title: "Help Desk",
     description: [
       "Developed a problem management system adaptable for various projects or institutions.",
@@ -156,19 +156,6 @@ export const projectData: ProjectData = [
   },
   {
     id: 3,
-    title: "A Library Js-utility Like Lodash",
-    description: [
-      "A modern JavaScript utility library delivering modularity, performance & extras",
-      "JavaScript library which provides utility functions for common programming tasks using the functional programming paradigm.",
-      "It can be broken down into several main areas: Utilities, Function, String, Array, Collection, Object, Sequence.",
-    ],
-    image: [],
-    technologies: ["JavaScript"],
-    githubLink: "https://github.com/eaysin-arafat/js-utility",
-    externalLink: "https://addons.mozilla.org/addon/wordy-birdy-scramble-game/",
-  },
-  {
-    id: 4,
     title: "Ecommarce Platform",
     description: [
       "Led the development of an eCommerce platform leveraging JavaScript, React.js, Redux Toolkit, and Tailwind CSS.",
@@ -216,6 +203,73 @@ export const projectData: ProjectData = [
       },
     ],
     technologies: ["JavaScript", "React JS", "Redux Toolkit", "Tailwind Css"],
+    githubLink: "https://github.com/eaysin-arafat/ecommarce_app_comfy_store",
+    externalLink: "https://addons.mozilla.org/addon/wordy-birdy-scramble-game/",
+  },
+  {
+    id: 3,
+    title: "A Library Js-utility Like Lodash",
+    description: [
+      "A modern JavaScript utility library delivering modularity, performance & extras",
+      "JavaScript library which provides utility functions for common programming tasks using the functional programming paradigm.",
+      "It can be broken down into several main areas: Utilities, Function, String, Array, Collection, Object, Sequence.",
+    ],
+    image: [],
+    technologies: ["JavaScript"],
+    githubLink: "https://github.com/eaysin-arafat/js-utility",
+    externalLink: "https://addons.mozilla.org/addon/wordy-birdy-scramble-game/",
+  },
+  {
+    id: 4,
+    title: "File Drive",
+    description: [
+      "FileDrive is a comprehensive file management platform designed to streamline the process of storing, sharing, and managing files among individuals and organizations.",
+      "With FileDrive, users can securely upload files of various types, including PDFs, images, PNGs, SVGs, and more.",
+      "Users can create organizations to manage files within specific groups or teams and grant role-based access to files.",
+      "The platform offers advanced features such as category-based file organization and authentication powered by Clerk. FileDrive also integrates with Convex, a third-party service, for backend operations.",
+    ],
+    image: [
+      {
+        url: "/project-image/file_drive/file-drive-10.png",
+        title: "screenshot 1",
+      },
+      {
+        url: "/project-image/file_drive/file-drive-08.png",
+        title: "screenshot 2",
+      },
+      {
+        url: "/project-image/file_drive/file-drive-07.png",
+        title: "screenshot 3",
+      },
+      {
+        url: "/project-image/file_drive/file-drive-06.png",
+        title: "screenshot 4",
+      },
+      {
+        url: "/project-image/file_drive/file-drive-05.png",
+        title: "screenshot 5",
+      },
+      {
+        url: "/project-image/file_drive/file-drive-04.png",
+        title: "screenshot 6",
+      },
+      {
+        url: "/project-image/file_drive/file-drive-2.png",
+        title: "screenshot 8",
+      },
+      {
+        url: "/project-image/file_drive/file-drive-1.png",
+        title: "screenshot 9",
+      },
+    ],
+    technologies: [
+      "JavaScript",
+      "React Js",
+      "Next Js",
+      "Clerk(Authentication)",
+      "Convex(Backend)",
+      "Tailwind Css",
+    ],
     githubLink: "https://github.com/eaysin-arafat/ecommarce_app_comfy_store",
     externalLink: "https://addons.mozilla.org/addon/wordy-birdy-scramble-game/",
   },

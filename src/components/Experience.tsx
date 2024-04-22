@@ -15,7 +15,12 @@ const Experience = ({ isTitle }: { isTitle?: boolean }) => {
               <div className="w-full">
                 <div className="block justify-between mb-1">
                   <h2 className="text-xl md:text-2xl font-bold text-primaryColor mb-1 flex justify-between">
-                    {experience.title}
+                    <p className="text-whiteColor">
+                      <span className="text-primaryColor">
+                        {experience.title}, &nbsp;
+                      </span>
+                      {experience.companyName}
+                    </p>
                     <p className="text-whiteColor font-semibold text-sm  mb-1">
                       {experience.date}
                     </p>
