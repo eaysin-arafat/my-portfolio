@@ -155,14 +155,14 @@ export const projectData: ProjectData = [
     externalLink: "https://addons.mozilla.org/addon/wordy-birdy-scramble-game/",
   },
   {
-    id: 3,
+    id: 2,
     title: "Ecommarce Platform",
     description: [
-      "Led the development of an eCommerce platform leveraging JavaScript, React.js, Redux Toolkit, and Tailwind CSS.",
-      "Implemented features for seamless product browsing, cart management, and secure checkout processes.",
-      "Utilized Redux Toolkit for state management to ensure efficient data flow and application stability.",
-      "Designed and styled the user interface with Tailwind CSS to achieve a modern and responsive design.",
-      "Employed JavaScript to enhance user interactions and provide dynamic functionality throughout the platform.",
+      "I have led the development of the eCommerce platform that utilizes JavaScript, React.js, Redux Toolkit and Tailwind CSS.",
+      "Adapted functionalities of easy product browsing, cart management and secure checkout systems.",
+      "Utilized the Redux Toolkit for state management to ensure proper data flow and the system stability.",
+      "Using Tailwind CSS to design an interface with a modern, reactive and responsive look and feel.",
+      "Employed JavaScript for user interactions to ensure that the entire platform is dynamic and user-friendly.",
     ],
     image: [
       {
