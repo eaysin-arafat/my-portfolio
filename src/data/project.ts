@@ -203,8 +203,8 @@ export const projectData: ProjectData = [
       },
     ],
     technologies: ["JavaScript", "React JS", "Redux Toolkit", "Tailwind Css"],
-    githubLink: "https://github.com/eaysin-arafat/ecommarce_app_comfy_store",
-    externalLink: "https://addons.mozilla.org/addon/wordy-birdy-scramble-game/",
+    githubLink: "https://github.com/eaysin-arafat/ecommarce_client.git",
+    externalLink: "https://ecommarce-client.vercel.app/",
   },
   {
     id: 3,
@@ -274,7 +274,7 @@ export const projectData: ProjectData = [
       "Convex(Backend)",
       "Tailwind Css",
     ],
-    githubLink: "https://github.com/eaysin-arafat/ecommarce_app_comfy_store",
+    githubLink: "https://github.com/eaysin-arafat/file-drive.git",
     externalLink: "https://addons.mozilla.org/addon/wordy-birdy-scramble-game/",
   },
 ];

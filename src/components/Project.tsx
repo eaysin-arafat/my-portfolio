@@ -63,10 +63,18 @@ const Project = ({
                     >
                       <FiGithub size="30px" />
                     </Link>
-                    <HiOutlineExternalLink
-                      size="30px"
+
+                    <Link
+                      to={project?.externalLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-whiteColor"
-                    />
+                    >
+                      <HiOutlineExternalLink
+                        size="30px"
+                        className="text-whiteColor"
+                      />
+                    </Link>
                   </div>
                 </cite>
               </blockquote>
