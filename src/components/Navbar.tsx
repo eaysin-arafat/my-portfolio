@@ -51,16 +51,6 @@ const Navbar = () => {
                   </Link>
                   <Link
                     className={
-                      location.pathname === "/projects"
-                        ? "text-primaryColor"
-                        : "text-whiteColor"
-                    }
-                    to="/projects"
-                  >
-                    Projects
-                  </Link>
-                  <Link
-                    className={
                       location.pathname === "/experience"
                         ? "text-primaryColor"
                         : "text-whiteColor"
@@ -69,6 +59,18 @@ const Navbar = () => {
                   >
                     Experience
                   </Link>
+
+                  <Link
+                    className={
+                      location.pathname === "/projects"
+                        ? "text-primaryColor"
+                        : "text-whiteColor"
+                    }
+                    to="/projects"
+                  >
+                    Projects
+                  </Link>
+
                   <Link
                     className={
                       location.pathname === "/open-source"
@@ -176,17 +178,7 @@ const Navbar = () => {
                   >
                     About
                   </Link>
-                  <Link
-                    className={
-                      location.pathname === "/projects"
-                        ? "text-primaryColor"
-                        : "text-whiteColor"
-                    }
-                    to="/projects"
-                    onClick={handleMobileNav}
-                  >
-                    Projects
-                  </Link>
+
                   <Link
                     className={
                       location.pathname === "/experience"
@@ -198,6 +190,19 @@ const Navbar = () => {
                   >
                     Experience
                   </Link>
+
+                  <Link
+                    className={
+                      location.pathname === "/projects"
+                        ? "text-primaryColor"
+                        : "text-whiteColor"
+                    }
+                    to="/projects"
+                    onClick={handleMobileNav}
+                  >
+                    Projects
+                  </Link>
+
                   <Link
                     className={
                       location.pathname === "/open-source"

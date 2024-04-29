@@ -16,8 +16,8 @@ const HomePage = () => {
     <div>
       <div className="pt-32">
         <About isTitle={false} />
-        <Projects seeMore isTitle={true} />
         <Experience isTitle={true} />
+        <Projects seeMore isTitle={true} />
         <OpenSource isTitle={true} />
         <Blog posts={transformedPosts} seeMore isTitle={true} />
         <Contact isTitle={true} />

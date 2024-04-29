@@ -21,7 +21,7 @@ export const experienceData: ExperienceData = [
   {
     date: "May 2023 - March 2024",
     title: "React Developer",
-    companyName: "Excel Technologies Let.",
+    companyName: "Excel Technologies Ltd.",
     location: "House #13, Road #07 Block #F, Banani Dhaka-1213",
     description:
       "Frontend development on multiple projects using React.js. Contributed to various website projects, applying React.js expertise. Ensured high-quality UI/UX and optimized performance.",
