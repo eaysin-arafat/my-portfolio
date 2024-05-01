@@ -6,6 +6,7 @@ import OpenSource from "../components/OpenSource";
 import Experience from "../components/Experience";
 import { posts } from "../data/blog";
 import useScrollToTop from "../hooks/useScrollToTop";
+import { projectData } from "../data/project";
 
 const HomePage = () => {
   useScrollToTop();
@@ -17,7 +18,11 @@ const HomePage = () => {
       <div className="pt-32">
         <About isTitle={false} />
         <Experience isTitle={true} />
-        <Projects seeMore isTitle={true} />
+        <Projects
+          seeMore
+          isTitle={true}
+          projectData={projectData.slice(0, 3)}
+        />
         <OpenSource isTitle={true} />
         <Blog posts={transformedPosts} seeMore isTitle={true} />
         <Contact isTitle={true} />

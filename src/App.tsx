@@ -8,7 +8,7 @@ import BlogPage from "./pages/BlogPage";
 import ContactPage from "./pages/ContactPage";
 import ExperiencePage from "./pages/ExperiencePage";
 import OpenSourcePage from "./pages/OpenSourcePage";
-import ProjectPage from "./pages/ProjectPage";
+import ProjectPage from "./pages/Project";
 import { posts } from "./data/blog";
 
 function App() {

@@ -1,15 +1,17 @@
 import { FiGithub } from "react-icons/fi";
 import { HiOutlineExternalLink } from "react-icons/hi";
 import { Link } from "react-router-dom";
-import { projectData } from "../data/project";
+import { ProjectData } from "../data/project";
 import RootLayout from "../layout/RootLayout";
 
 const Project = ({
   seeMore,
   isTitle,
+  projectData,
 }: {
   seeMore?: boolean;
   isTitle?: boolean;
+  projectData: ProjectData;
 }) => {
   return (
     <RootLayout>
