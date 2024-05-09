@@ -16,7 +16,7 @@ export const experienceData: ExperienceData = [
     companyName: "Freelance Corner",
     location: "Natun Bazar, Sadar, Mymensingh",
     description:
-      "Leveraged my front-end development expertise to contribute to various websites built with React JS.",
+      "I utilized my expertise in front-end development to contribute significantly to multiple websites. These websites were constructed using React JS, a framework renowned for its versatility and efficiency. My role involved implementing various features and ensuring a seamless user experience across these platforms.",
   },
   {
     date: "May 2023 - March 2024",
@@ -24,6 +24,6 @@ export const experienceData: ExperienceData = [
     companyName: "Excel Technologies Ltd.",
     location: "House #13, Road #07 Block #F, Banani Dhaka-1213",
     description:
-      "Frontend development on multiple projects using React.js. Contributed to various website projects, applying React.js expertise. Ensured high-quality UI/UX and optimized performance.",
+      "I've engaged in frontend development across multiple projects, employing React.js as the primary framework. Within these endeavors, I've played a pivotal role in contributing to various website projects, leveraging my expertise in React.js to enhance functionality and user experience. My focus remains steadfast on delivering high-quality UI/UX designs while optimizing performance for optimal user satisfaction.",
   },
 ];
